@@ -16,7 +16,7 @@
 <meta property="og:description" content="Gamma FunctionDefinition of the Gamma Function$\Gamma (z)&#x3D; \int_0^\infty e^{-t}t^{z-1}dt$，当$Re(z)&gt;0$，$\Gamma (z)$ 会在复平面的右半部分收敛converge。$\Gamma (x+iy)&#x3D; \int_0^\infty e^{-t}t^{x-1+iy}dt&#x3D;\int_0^\infty">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-15T03:37:12.000Z">
-<meta property="article:modified_time" content="2020-02-15T06:58:47.005Z">
+<meta property="article:modified_time" content="2020-02-16T07:50:25.214Z">
 <meta property="article:author" content="Echo">
 <meta property="article:tag" content="fun">
 <meta name="twitter:card" content="summary">
@@ -180,7 +180,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Gamma-Function"><a href="#Gamma-Function" class="headerlink" title="Gamma Function"></a>Gamma Function</h1><h2 id="Definition-of-the-Gamma-Function"><a href="#Definition-of-the-Gamma-Function" class="headerlink" title="Definition of the Gamma Function"></a>Definition of the Gamma Function</h2><p>$\Gamma (z)= \int_0^\infty e^{-t}t^{z-1}dt$，<br>当$Re(z)&gt;0$，$\Gamma (z)$ 会在复平面的右半部分收敛converge。<br>$\Gamma (x+iy)= \int_0^\infty e^{-t}t^{x-1+iy}dt=\int_0^\infty e^{-t}t^{x-1}e^{iy\ln (t)}dt=\int_0^\infty e^{-t}t^{x-1} [\cos(y\ln(t))+i\sin(y\ln(t))] dt.$<br>方括号内对有t有界,t趋于正无穷时收敛，$e^{-t}$ 限制，t趋于0时，当$x=Re(z)&gt;1$时收敛。</p>
-<h2 id="Some-Properties-of-the-Gamma-Function"><a href="#Some-Properties-of-the-Gamma-Function" class="headerlink" title="Some Properties of the Gamma Function"></a>Some Properties of the Gamma Function</h2><p>1) $\Gamma(z+1)=z\Gamma(z)$ (分部积分)<br>$\Gamma(n+1)=n\Gamma(n)=n(n-1)!=n!$<br>2) gamma function has simple poles at the point $z=-n,(n=0,1,2,…)$,<br>$\Gamma (z)= \int_0^1 e^{-t}t^{z-1}dt+\int_1^\infty e^{-t}t^{z-1}dt$,第一个积分，如果$Re(z)=x&gt;0$(i.e. z在右半平面),那么$Re(z+k)=x+n&gt;0$并有$t^{z+k}|_{t=0}=0.$ 因此，<br>$\int_0^1 e^{-t}t^{z-1}dt=\int_0^1\sum_{k=0}^\infty\frac{(-t)^k}{k!}dt=\sum_{k=0}^\infty\frac{(-1)^k}{k!}\int_0^1t^{k+z-1}dt=\sum_{k=0}^\infty\frac{(-1)^k}{k!(k+z)}$<br>3) 第二个积分，令 $\varphi(z)=\int_1^\infty e^{-t}t^{z-1}dt =\int_1^\infty e^{(z-1)\ln {(t)-t}}dt$<br>$e^{(z-1)\ln {(t)-t}}$ 对于任意的 $z$ 和 $t \ge 1$ 是连续的，在$t \ge 1$ 时 $\varphi(z)$ 是一个完全关于$z$的函数,$z=x+iy$, 考虑复平面的一个闭区域D，记$x_0=\max_{z\in D}Re(z)$。<br>则 $|e^{-t}t^{z-1}|=|e^{(z-1)\ln{(t)-t}}|=|e^{(x-1)\ln(t)-t}|\cdot|e^{iy\ln(t)}|=|e^{(x-1)\ln(t)-t}|\leq e^{(x_0-1)\ln(t)-t}=e^tt^{x_0-1}$.<br>这说明积分在D中收敛，因此 $\varphi(z)$ 是regular并且可微的，是一个全函数entire function。</p>
+<h2 id="Some-Properties-of-the-Gamma-Function"><a href="#Some-Properties-of-the-Gamma-Function" class="headerlink" title="Some Properties of the Gamma Function"></a>Some Properties of the Gamma Function</h2><p>1) $\Gamma(z+1)=z\Gamma(z)$ (分部积分)<br>$\Gamma(n+1)=n\Gamma(n)=n(n-1)!=n!$<br>2) gamma function has simple poles at the point $z=-n,(n=0,1,2,…)$,<br>$\Gamma (z)= \int_0^1 e^{-t}t^{z-1}dt+\int_1^\infty e^{-t}t^{z-1}dt$,<br>第一个积分，如果$Re(z)=x&gt;0$(i.e. z在右半平面),那么$Re(z+k)=x+n&gt;0$并有$t^{z+k}|_{t=0}=0.$ 因此，<br>$\int_0^1 e^{-t}t^{z-1}dt=\int_0^1\sum_{k=0}^\infty\frac{(-t)^k}{k!}dt=\sum_{k=0}^\infty\frac{(-1)^k}{k!}\int_0^1t^{k+z-1}dt=\sum_{k=0}^\infty\frac{(-1)^k}{k!(k+z)}$<br>第二个积分，令 $\varphi(z)=\int_1^\infty e^{-t}t^{z-1}dt =\int_1^\infty e^{(z-1)\ln {(t)-t}}dt$<br>$e^{(z-1)\ln {(t)-t}}$ 对于任意的 $z$ 和 $t \ge 1$ 是连续的，在$t \ge 1$ 时 $\varphi(z)$ 是一个完全关于$z$的函数,$z=x+iy$, 考虑复平面的一个闭区域D，记$x_0=\max_{z\in D}Re(z)$。<br>则 $|e^{-t}t^{z-1}|=|e^{(z-1)\ln{(t)-t}}|=|e^{(x-1)\ln(t)-t}|\cdot|e^{iy\ln(t)}|=|e^{(x-1)\ln(t)-t}|\leq e^{(x_0-1)\ln(t)-t}=e^tt^{x_0-1}$.<br>这说明积分在D中收敛，由于D的任意性，因此 $\varphi(z)$ 是正则regular并且可微的，是一个整函数entire function（在整个复平面处处解析的函数）。<br>因此 $\Gamma(z)=\sum_{k=0}^\infty\frac{(-1)^k}{k!(k+z)}+\int_1^\infty e^{-t}t^{z-1}dt=\sum_{k=0}^\infty\frac{(-1)^k}{k!(k+z)}+$ entire function.$\Gamma(z)$ has only simple poles at the points $z=-n,(n=0,1,2,…)$.</p>
+<h2 id="Limit-Representation-of-the-Gamma-Function"><a href="#Limit-Representation-of-the-Gamma-Function" class="headerlink" title="Limit Representation of the Gamma Function"></a>Limit Representation of the Gamma Function</h2><p>limit representation of the Gamma Function<br>[<br>\Gamma(z)=\lim_{n\to \infty}\frac{n!n^z}{z(z+1)\dots (z+n)} ,<br>]<br>初始假设 $Re(z)&gt;0$</p>
 
       
 
@@ -273,6 +274,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/02/16/promises/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          promises
+        
+      </div>
+    </a>
   
   
     <a href="/2020/02/13/stardust/" id="article-nav-older" class="article-nav-link-wrap">
@@ -595,24 +605,5 @@ MathJax.Hub.Queue(function() {
 
 </div>
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<!--<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">-->
-
 </body>
 </html>
