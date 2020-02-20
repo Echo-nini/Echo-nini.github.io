@@ -159,6 +159,80 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-相场方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/19/%E7%9B%B8%E5%9C%BA%E6%96%B9%E6%B3%95/">相场方法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/19/%E7%9B%B8%E5%9C%BA%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-02-19T03:29:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>向场方法是一种计算机模拟方法，，主要用于模拟材料的微观结构。</p>
+<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><p>扩散方程<br>序参量orderparameter，物理学家朗道在研究平衡相变时首先提出来的，是针对系统相变后和相变前相比出现的宏观上的物理性能或结构而言的，是描述系统有序程度的物理参量。液相有序度低 $\eta=0$,固相有序度高 $\eta \neq 0$<br>(扩散界面假设)序参量在穿过界面时，是连续变化的</p>
+<p>自由能密度可以用序参量的幂级数表示</p>
+<script type="math/tex; mode=display">f_L(\eta,T,P)=f_0+\sum_{i=1}A_i\eta ^i</script><p>稳定条件：对 $\eta$一阶偏导等于零， 对 $\eta$二阶偏导大于零.</p>
+<p>引入序参量的空间梯度项，来表示界面能密度：</p>
+<script type="math/tex; mode=display">f_G(\eta,\bigtriangledown \eta,T,P)=f_L(\eta,T,P)+\sigma \bigtriangledown \eta \cdot \bigtriangledown
+\eta</script><h2 id="Ginzbug-Landau方程（Allen-Cahn方程）"><a href="#Ginzbug-Landau方程（Allen-Cahn方程）" class="headerlink" title="Ginzbug-Landau方程（Allen-Cahn方程）"></a>Ginzbug-Landau方程（Allen-Cahn方程）</h2><p>假设体系的总自由能F可以标记为序参量 $\eta$的泛函:$F=\int_\Omega f(\eta,\bigtriangledown \eta)d \Omega$</p>
+<script type="math/tex; mode=display">\delta F=\int_\Omega f(\eta,\bigtriangledown \eta)d \Omega\\=\int_\Omega[\frac{\partial f}{\partial \eta}\delta \eta+\frac{\partial f}{\partial(\bigtriangledown \eta)}\cdot \delta(\bigtriangledown \eta)]d \Omega \\=\int _\Omega [\frac{\partial f}{\partial \eta}\delta \eta-\bigtriangledown \cdot (\frac{\partial f}{\partial(\bigtriangledown \eta)})\delta \eta]d \Omega+\int_\Omega \bigtriangledown \cdot (\frac{\partial f}{\partial(\bigtriangledown \eta}\delta \eta)d\Omega\\=\int_\Omega [\frac{\partial f}{\partial \eta}-\bigtriangledown \cdot (\frac{\partial f}{\partial(\bigtriangledown \eta)})]\delta \eta d \Omega+\int_{\partial \Omega} (\frac{\partial f}{\partial(\bigtriangledown \eta}\delta \eta\cdot \large{\mbox{n}})dS\\=\int_\Omega [\frac{\partial f}{\partial \eta}-\bigtriangledown \cdot (\frac{\partial f}{\partial(\bigtriangledown \eta)})]\delta \eta d \Omega</script><p>(Gauss公式 $\oint_S \mbox {F} \bullet \mbox{n}dS=\iiint_\Omega(\bigtriangledown \bullet \mbox{F})d \Omega$</p>
+<script type="math/tex; mode=display">\delta F=\int_\Omega f(\eta,\bigtriangledown \eta )d \Omega \\=\int_\Omega [\frac{\partial f}{\partial \eta}-\bigtriangledown \cdot (\frac{\partial f}{\partial(\bigtriangledown \eta)})]\delta \eta d \Omega\\=\int_\Omega \frac{\delta f}{\delta \eta}\delta \eta d \Omega</script><script type="math/tex; mode=display">\frac{\partial F}{\partial t} =\int_\Omega \frac{\delta f}{\delta \eta}\frac{\partial \eta}{\partial t}d \Omega(总自由能变化率)</script><p>能量最低原理 $\partial F/ \partial t \leq0$</p>
+<script type="math/tex; mode=display">\frac{\partial \eta}{\partial t}=-L\frac{\delta f}{\delta \eta}=-L[\frac{\partial f}{\partial \eta}-\bigtriangledown \cdot (\frac{\partial f}{\partial(\bigtriangledown \eta)})]</script><p>适用于非守恒场</p>
+<h2 id="Cahn-Hiliard方程"><a href="#Cahn-Hiliard方程" class="headerlink" title="Cahn-Hiliard方程"></a>Cahn-Hiliard方程</h2><p>假设体系的总自由能F可以表示为浓度c的泛函：$F=\int_\Omega f(c,\bigtriangledown c)d \Omega$</p>
+<script type="math/tex; mode=display">\frac{\partial c}{\partial t}+\bigtriangledown \cdot J=0(连续性方程),\\J=-M\bigtriangledown \mu,\\\mu =\frac{\delta f}{\delta c}\\\frac{\partial c}{\partial t}=\bigtriangledown \cdot (M\bigtriangledown\frac{\delta f}{\delta c})=\bigtriangledown \cdot(M\bigtriangledown (\frac{\partial f}{\partial c}-\bigtriangledown \cdot (\frac{\partial f}{\partial(\bigtriangledown c)})))</script><p>适用于守恒场</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/19/%E7%9B%B8%E5%9C%BA%E6%96%B9%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-数学基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
